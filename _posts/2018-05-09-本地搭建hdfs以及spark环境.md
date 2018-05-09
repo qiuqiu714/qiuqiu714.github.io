@@ -66,7 +66,7 @@ $ bin/hdfs namenode -format
 
 成功输出如下:
 
-![成功输出结果](images/hadoop_success.png)
+![成功输出结果](./images/hadoop_success.png)
 
 如果在hosts文件中修改过0.0.0.0 这个地址，可能会有错误，建议去掉这层修改
 
