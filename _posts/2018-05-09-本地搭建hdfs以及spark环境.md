@@ -98,7 +98,7 @@ $ jps
 
 ### (4) web页面查看hdfs服务情况
 
-```http://localhost:8100``` 
+http://localhost:8100
 
 8100对应hdfs-site.xml配置文件中的dfs.http.address端口号
 
