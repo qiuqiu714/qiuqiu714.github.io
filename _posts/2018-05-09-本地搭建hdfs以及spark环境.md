@@ -68,7 +68,11 @@ $ bin/hdfs namenode -format
 
 成功输出如下:
 
+<<<<<<< HEAD
 ![成功输出结果](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/hadoop_success.png?raw=true)
+=======
+![成功输出结果](./images/hadoop_success.png)
+>>>>>>> caea6c211a4ab5e7c5f51f6bff70dfc54f041276
 
 如果在hosts文件中修改过0.0.0.0 这个地址，可能会有错误，建议去掉这层修改
 
