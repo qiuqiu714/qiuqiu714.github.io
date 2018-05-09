@@ -12,7 +12,7 @@ tags: crontab, java
 但将命令写成shell脚本并且添加到crontab定时执行时报错，报错如下：
 
 > Exception in thread "main" java.lang.UnsupportedClassVersionError:         
-    > com/kingnetdc/streaming/Main : Unsupported major.minor version 52.0
+    com/kingnetdc/streaming/Main : Unsupported major.minor version 52.0
         at java.lang.ClassLoader.defineClass1(Native Method)
         at java.lang.ClassLoader.defineClass(ClassLoader.java:648)
         at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
