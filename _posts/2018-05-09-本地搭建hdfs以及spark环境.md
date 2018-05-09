@@ -6,6 +6,8 @@ categories:
 tags: spark, hadoop
 ---
 
+因为工作需要搭建本地spark运行环境，同时需要访问hdfs，记录一下搭建过程和遇到的问题
+
 # 一、开始
 ## 1.hdfs准备
 首先去官网下载hadoop的tar包
@@ -66,7 +68,7 @@ $ bin/hdfs namenode -format
 
 成功输出如下:
 
-![成功输出结果](images/hadoop_success.png)
+![成功输出结果](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/hadoop_success.png?raw=true)
 
 如果在hosts文件中修改过0.0.0.0 这个地址，可能会有错误，建议去掉这层修改
 
@@ -77,20 +79,20 @@ $ sbin/start-dfs.sh
 
 在mac系统中可能会遇到如下问题:
 
-![错误](images/hadoop_start_error.png)
+![错误](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/hadoop_start_error.png?raw=true)
 
 原因是mac没有打开远程访问权限，在```系统偏好设置->共享```中打开远程登录即可
 
 成功运行结果如下：
 
-![成功](images/hadoop_start_success.png)
+![成功](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/hadoop_start_success.png?raw=true)
 
 执行成功后，输入jps查看开启状态
 ```
 $ jps
 ```
 
-![jps](images/jps_result.png)
+![jps](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/jps_result.png?raw=true)
 
 可以看到启动了一个datanode和两个namenode
 
@@ -100,7 +102,7 @@ $ jps
 
 8100对应hdfs-site.xml配置文件中的dfs.http.address端口号
 
-![](images/hdfs_web.png)
+![](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/hdfs_web.png?raw=true)
 
 至此，hdfs本地环境搭建成功
 
@@ -149,7 +151,7 @@ $ sbin/start-master.sh
 ```
 可以启动master，只后再浏览器输入```http://localhost:8080/``` 可以看到master的地址（因人而异）:
 
-![](images/spark_no_worker.png)
+![](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/spark_no_worker.png?raw=true)
 
 可以看到master地址为```spark://zhoujydeMacBook-Pro.local:7077```
 
@@ -159,9 +161,9 @@ $ bin/spark-class org.apache.spark.deploy.worker.Worker spark://zhoujydeMacBook-
 ```
 
 看到成功的信息：
-![](images/spark_worker.png)
+![](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/spark_worker.png?raw=true)
 成功启动worker后，再看页面，可以看到启动的alive workers 为1
-![](images/spark_master.png)
+![](https://github.com/BOSSzz/BOSSzz.github.io/blob/master/_posts/images/spark_master.png?raw=true)
 
 至此spark启动成功，可以在ide中编写spark程序本地运行
 
