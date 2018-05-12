@@ -701,6 +701,8 @@ vendors:
   # https://github.com/ethantw/Han
   han:
 
+# comment
+intensedebate_comments: true
 
 # Assets
 css: assets/css
