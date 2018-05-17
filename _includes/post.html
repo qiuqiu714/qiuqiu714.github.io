@@ -12,5 +12,8 @@
     {% elsif site.duoshuo_shortname and site.duoshuo_share %}
       {% include _partials/share/duoshuo_share.html %}
     {% endif %}
+    {% if site.intensedebate_comments %}
+      {% include intensedebate-comments.html %}
+    {% endif %}
   </div>
 </div>
