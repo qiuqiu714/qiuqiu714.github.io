@@ -8,9 +8,11 @@ tags: netty, socketio
 
 最近公司有个项目使用了netty-socketio来做实时聊天。但是在部署过程中发现当部署多台机器的时候连接会自动断开，无法建立连接。无奈只能只启动一台机器。但是只有一台机器会有一定风险，所以尝试一下能否解决多台机器断开连接的问题。
 
+而且多节点目前只支持轮询（此处吐槽一下某某云，如果能像nginx那样支持sticky就不用那么麻烦了）
+
 所以新建了一个简单的项目来测试。
 
-项目地址在github上
+项目地址在github上[https://github.com/BOSSzz/socketio-redis-test](https://github.com/BOSSzz/socketio-redis-test)
 
 # 开始
 ## java代码
