@@ -31,7 +31,7 @@ targetNormalizedTime 结束的单位时间
     UnityEngine.Animator:MatchTarget(Vector3, Quaternion, AvatarTarget, MatchTargetWeightMask, Single,Single)  
     PlayerMovement:processVault() (at Assets/Scripts/PlayerMovement.cs:58)  
     PlayerMovement:Update() (at Assets/Scripts/PlayerMovement.cs:31)  
-    ```
+    ```  
 意思是在动画转化状态时,MatchTarget不会生效，因此在判定条件中加了一句  
     ```
     anim.IsInTransition(0) == false
