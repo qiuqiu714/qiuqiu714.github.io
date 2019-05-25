@@ -1,0 +1,34 @@
+---
+title: 添加音效的方法
+date: 2019-04-28 12:40:00
+categories:
+- Unity
+tags: Unity, C#
+---
+
+# 一. 直接播放音效
+先在对应脚本中添加实例
+```
+public AudioClip tankExplosionAudio;
+```
+不能忘记在Inspector里赋值 
+在对应位置添加播放代码即可
+```
+AudioSource.PlayClipAtPoint(bulletExplosionAudio,transform.position);
+```
+# 二. 通过组件添加音效
+先在对应物体中添加Audio Source组件，在AudioClip中添加 
+![AudioSource](https://github.com/qiuqiu714/qiuqiu714.github.io/blob/master/_posts/images/AudioSource.png?raw=true)  
+在脚本中添加实例
+```
+private AudioSource audio;
+```
+获取AudioSource组件，和获取Rigidbody类似
+```
+audio = this.GetComponent<AudioSource>();
+```
+设定播放的资源，然后播放
+```
+audio.clip = driveAudio;
+if(audio.isPlaying == false) audio.Play();
+```
